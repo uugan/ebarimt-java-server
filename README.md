@@ -23,7 +23,7 @@ $yum install prelink
 ```
 Need to copy libPosAPI.so file to /usr/lib folder.
 
-Open init folder and run cmd.sh file like $./cmd.sh or $sh cmd.sh
+Open init folder(there is a dummy libPosAPI.so) and run cmd.sh file like $./cmd.sh or $sh cmd.sh
 
 Description of cmd.sh file:
 
@@ -47,8 +47,7 @@ getInformation = {
 }
 checkAPI = {
     "config": {
-        "message": "[100] Тохиргооны мэдээлэл олдсонгүй. Мэдээлэл илгээх хүсэлтийг ажиллуулж тохиргооны мэдээллүүдийг татна уу!!!",
-        "success": false
+        "success": true
     },
     "database": {
         "success": true
@@ -63,7 +62,7 @@ result = {
 }
 
 ```
-#Run web server
+## Run web server
 
 ```console
 mvn package
@@ -79,3 +78,6 @@ Working api paths are:
 - localhost:8080/put
 - localhost:8080/senddata
 - localhost:8080/return
+
+TODOs:
+- Create scheduled job for calling senddata every 10 minutes.
