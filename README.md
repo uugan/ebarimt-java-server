@@ -78,7 +78,8 @@ java -Dport=8080 -Dlog4j.configuration=file:./logger.xml -Djava.library.path="/u
 - GET localhost:8080/senddata
 - POST localhost:8080/put
 - POST localhost:8080/return
+
 POST requests JSON bodies are must be same as in [documentation](https://ebarimt.mn/img/Pos%20API%202.1.2%20User%20Guide_mn.pdf).
 Also you can use ebarimt-java-client for generating json request.
-### TODOs:
+## TODOs:
 - Create scheduled job for calling senddata every 10 minutes.
