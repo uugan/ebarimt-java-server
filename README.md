@@ -67,17 +67,18 @@ result = {
 ```console
 mvn package
 ```
-Run server:
+### Run server:
 ```console
 java -Dport=8080 -Dlog4j.configuration=file:./logger.xml -Djava.library.path="/usr/lib" -jar ebarimt-java-server-1.0.jar
 ```
-Working api paths are:
+### API paths are:
 
-- localhost:8080/info
-- localhost:8080/check
-- localhost:8080/put
-- localhost:8080/senddata
-- localhost:8080/return
-
-TODOs:
+- GET localhost:8080/info
+- GET localhost:8080/check
+- GET localhost:8080/senddata
+- POST localhost:8080/put
+- POST localhost:8080/return
+POST requests JSON bodies are must be same as in [documentation](https://ebarimt.mn/img/Pos%20API%202.1.2%20User%20Guide_mn.pdf).
+Also you can use ebarimt-java-client for generating json request.
+### TODOs:
 - Create scheduled job for calling senddata every 10 minutes.
